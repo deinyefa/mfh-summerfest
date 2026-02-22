@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-navy: #2b335f;
+  --color-white: #ffffff;
+  --color-lavender: #c0a9c1;
+  --color-sky: #09bff6;
+  --color-magenta: #d01965;
+  --color-navy-dark: #1e2547;
+  --color-navy-light: #3a4478;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-bebas-neue: var(--font-bebas-neue), sans-serif;
+  --font-fraunces: var(--font-fraunces), serif;
+  --font-plus-jakarta-sans: var(--font-plus-jakarta-sans), sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-float: float 8s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-plus-jakarta-sans);
+  background: var(--color-white);
+  color: var(--color-navy);
+  overflow-x: hidden;
+}
+
+/* Base custom classes that couldn't easily map cleanly to utility due to extensive pseudo-elements or complex nesting not targeted by regex script */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: none;
 }
