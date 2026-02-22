@@ -51,65 +51,66 @@ export default function MoreGames() {
 
           {/*  RIGHT: Signup Form  */}
           <div className="fade-up">
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md">
+            <form name="fun-games-signup" method="POST" data-netlify="true" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md">
+              <input type="hidden" name="form-name" value="fun-games-signup" />
               <div className="font-fraunces text-[1.4rem] text-white mb-6">Sign Up for Fun Games</div>
               <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.55)", marginBottom: "1.5rem", marginTop: "-0.5rem", }}>{"Register your interest and tell us which games you'd like to compete in. One entry per person."}</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="mb-5">
                   <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">First Name</label>
-                  <input className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="Grace" />
+                  <input name="first_name" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="Grace" />
                 </div>
                 <div className="mb-5">
                   <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Last Name</label>
-                  <input className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="Okafor" />
+                  <input name="last_name" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="Okafor" />
                 </div>
               </div>
 
               <div className="mb-5">
                 <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Email Address</label>
-                <input className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="email" placeholder="grace@email.com" />
+                <input name="email" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="email" placeholder="grace@email.com" />
               </div>
 
               <div className="mb-5">
                 <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Phone Number</label>
-                <input className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="tel" placeholder="(613) 555-0000" />
+                <input name="phone" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="tel" placeholder="(613) 555-0000" />
               </div>
 
               <div className="mb-5">
                 <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Age</label>
-                <input className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="number" placeholder="e.g. 24" min="17" />
+                <input name="age" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="number" placeholder="e.g. 24" min="17" />
               </div>
 
               <div className="mb-5">
                 <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Your Church</label>
-                <input className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="e.g. Aflame Church" />
+                <input name="church" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="e.g. Aflame Church" />
               </div>
 
               <div className="mb-5">
                 <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Which games would you like to compete in?</label>
                 <div className="flex flex-col gap-2.5 mt-2">
                   <label className="flex items-center gap-3 cursor-pointer text-white/55 uppercase tracking-widest font-bold">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="games" value="Sack Race" />
                     <span>👟 Sack Race</span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer text-white/55 uppercase tracking-widest font-bold">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="games" value="Relay Race" />
                     <span>🏃 Relay Race</span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer text-white/55 uppercase tracking-widest font-bold">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="games" value="Egg Race" />
                     <span>🥚 Egg Race</span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer text-white/55 uppercase tracking-widest font-bold">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="games" value="100m Race" />
                     <span>⚡ 100m Race</span>
                   </label>
                 </div>
               </div>
 
-              <button className="inline-block bg-sky text-navy-dark w-full mt-5 font-bold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)]">Register for Games →</button>
-            </div>
+              <button type="submit" className="inline-block bg-sky text-navy-dark w-full mt-5 font-bold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)]">Register for Games →</button>
+            </form>
           </div>
 
         </div>

@@ -65,58 +65,58 @@ export default function Vendors() {
           </div>
         </div>
 
-        {/*  VENDOR FORM  */}
         <div id="vendor-apply" className="fade-up [&_.form-card]:bg-white [&_.form-card]:border-[#e8eaf5] [&_.form-title]:text-navy [&_label]:text-navy-light [&_input]:bg-[#f7f8fc] [&_input]:border-[#dde0f0] [&_input]:text-navy [&_select]:bg-[#f7f8fc] [&_select]:border-[#dde0f0] [&_select]:text-navy [&_textarea]:bg-[#f7f8fc] [&_textarea]:border-[#dde0f0] [&_textarea]:text-navy [&_input:focus]:bg-[#eef9fe] [&_textarea:focus]:bg-[#eef9fe] [&_select:focus]:bg-[#eef9fe]">
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md" style={{ background: "var(--white)", border: "1px solid #e8eaf5", }}>
+          <form name="vendor-application" method="POST" data-netlify="true" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md" style={{ background: "var(--white)", border: "1px solid #e8eaf5", }}>
+            <input type="hidden" name="form-name" value="vendor-application" />
             <div className="font-fraunces text-[1.4rem] text-white mb-6" style={{ color: "var(--navy)", }}>Vendor Application</div>
 
             <div className="mb-5" style={{ marginBottom: "1.25rem", }}>
               <label style={{ color: "var(--navy-light)", }}>Business / Vendor Name</label>
-              <input className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="e.g. Auntie Grace's Kitchen" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }} />
+              <input name="business_name" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="e.g. Auntie Grace's Kitchen" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }} />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", }}>
               <div className="mb-5">
                 <label style={{ color: "var(--navy-light)", }}>Contact Name</label>
-                <input className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="Full name" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }} />
+                <input name="contact_name" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="Full name" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }} />
               </div>
               <div className="mb-5">
                 <label style={{ color: "var(--navy-light)", }}>Phone Number</label>
-                <input className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="tel" placeholder="(613) 555-0000" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }} />
+                <input name="phone" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="tel" placeholder="(613) 555-0000" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }} />
               </div>
             </div>
 
             <div className="mb-5">
               <label style={{ color: "var(--navy-light)", }}>Email Address</label>
-              <input className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="email" placeholder="you@example.com" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }} />
+              <input name="email" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="email" placeholder="you@example.com" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }} />
             </div>
 
             <div className="mb-5">
               <label style={{ color: "var(--navy-light)", }}>Type of Products / Services</label>
-              <select className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 [&>option]:bg-navy [&>option]:text-white" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }}>
+              <select name="product_type" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 [&>option]:bg-navy [&>option]:text-white" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }}>
                 <option value="" disabled selected>Select a category</option>
-                <option>Food & Beverages</option>
-                <option>Fashion & Clothing</option>
-                <option>Art & Crafts</option>
-                <option>Beauty & Wellness</option>
-                <option>Books & Media</option>
-                <option>Jewelry & Accessories</option>
-                <option>{"Children's Products"}</option>
-                <option>Home & Decor</option>
-                <option>Other / Mixed</option>
+                <option value="Food & Beverages">Food & Beverages</option>
+                <option value="Fashion & Clothing">Fashion & Clothing</option>
+                <option value="Art & Crafts">Art & Crafts</option>
+                <option value="Beauty & Wellness">Beauty & Wellness</option>
+                <option value="Books & Media">Books & Media</option>
+                <option value="Jewelry & Accessories">Jewelry & Accessories</option>
+                <option value="Children's Products">{"Children's Products"}</option>
+                <option value="Home & Decor">Home & Decor</option>
+                <option value="Other / Mixed">Other / Mixed</option>
               </select>
             </div>
 
             <div className="mb-5">
               <label style={{ color: "var(--navy-light)", }}>Brief Description of Offerings</label>
-              <textarea className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" rows={3} placeholder="Tell us a bit about what you'll be selling..." style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", resize: "vertical", }}></textarea>
+              <textarea name="description" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" rows={3} placeholder="Tell us a bit about what you'll be selling..." style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", resize: "vertical", }}></textarea>
             </div>
 
             <div className="mb-5">
               <label style={{ color: "var(--navy-light)", }}>Registration Tier</label>
-              <select className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 [&>option]:bg-navy [&>option]:text-white" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }}>
-                <option>Early Bird — $60</option>
-                <option>Regular — $100</option>
+              <select name="tier" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 [&>option]:bg-navy [&>option]:text-white" style={{ background: "#f7f8fc", border: "1px solid #dde0f0", color: "var(--navy)", }}>
+                <option value="Early Bird — $60">Early Bird — $60</option>
+                <option value="Regular — $100">Regular — $100</option>
               </select>
             </div>
 
@@ -124,14 +124,14 @@ export default function Vendors() {
               <label style={{ color: "var(--navy-light)", }}>I confirm that my products comply with Summer Fest guidelines</label>
               <div className="flex flex-col gap-2.5 mt-2" style={{ marginTop: "0.5rem", }}>
                 <label className="flex items-center gap-3 cursor-pointer" style={{ display: "flex", alignItems: "center", gap: "0.75rem", cursor: "pointer", }}>
-                  <input type="checkbox" style={{ width: "18px", height: "18px", accentColor: "var(--sky)", flexShrink: "0", }} />
+                  <input type="checkbox" name="guidelines_agreement" required style={{ width: "18px", height: "18px", accentColor: "var(--sky)", flexShrink: "0", }} />
                   <span style={{ fontSize: "0.875rem", color: "var(--navy-light)", }}>I have read and agree to the vendor guidelines and prohibited items list</span>
                 </label>
               </div>
             </div>
 
-            <button className="inline-block bg-magenta text-white font-bold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)]" style={{ width: "100%", marginTop: "0.5rem", border: "none", }}>Submit Application</button>
-          </div>
+            <button type="submit" className="inline-block bg-magenta text-white font-bold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)]" style={{ width: "100%", marginTop: "0.5rem", border: "none", }}>Submit Application</button>
+          </form>
         </div>
       </section>
     </>
