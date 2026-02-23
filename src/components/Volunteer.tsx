@@ -4,9 +4,11 @@ import { useState, SyntheticEvent } from "react"
 
 export default function Volunteer() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsSubmitting(true)
     const form = e.currentTarget
     const formData = new FormData(form)
     const data: Record<string, string | string[]> = {}
@@ -31,6 +33,7 @@ export default function Volunteer() {
       setIsSubmitted(true)
     } catch (error) {
       console.error(error)
+      setIsSubmitting(false)
     }
   }
 
@@ -135,7 +138,9 @@ export default function Volunteer() {
                   <textarea name="skills_notes" className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" rows={3} placeholder="e.g. I'm a trained first-aider, I speak French, I have my own camera..."></textarea>
                 </div>
 
-                <button type="submit" className="inline-block bg-sky font-bold text-sm tracking-[0.08em] text-navy-dark uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)] w-full" style={{ border: "none", }}>Sign Me Up →</button>
+                <button type="submit" disabled={isSubmitting} className="inline-block bg-sky font-bold text-sm tracking-[0.08em] text-navy-dark uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)] w-full disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none" style={{ border: "none", }}>
+                  {isSubmitting ? "Submitting..." : "Sign Me Up →"}
+                </button>
               </form>
             )}
           </div>

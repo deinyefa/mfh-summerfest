@@ -4,9 +4,11 @@ import { useState, SyntheticEvent } from "react"
 
 export default function Vendors() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsSubmitting(true)
     const form = e.currentTarget
     const formData = new FormData(form)
     const data: Record<string, string | string[]> = {}
@@ -31,6 +33,7 @@ export default function Vendors() {
       setIsSubmitted(true)
     } catch (error) {
       console.error(error)
+      setIsSubmitting(false)
     }
   }
 
@@ -174,7 +177,9 @@ export default function Vendors() {
                 </div>
               </div>
 
-              <button type="submit" className="inline-block bg-magenta text-white font-bold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)]" style={{ width: "100%", marginTop: "0.5rem", border: "none", }}>Submit Application</button>
+              <button type="submit" disabled={isSubmitting} className="inline-block bg-magenta text-white font-bold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none" style={{ width: "100%", marginTop: "0.5rem", border: "none", }}>
+                {isSubmitting ? "Submitting..." : "Submit Application"}
+              </button>
             </form>
           )}
         </div>

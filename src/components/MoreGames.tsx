@@ -4,9 +4,11 @@ import { useState, SyntheticEvent } from "react"
 
 export default function MoreGames() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsSubmitting(true)
     const form = e.currentTarget
     const formData = new FormData(form)
     const data: Record<string, string | string[]> = {}
@@ -31,6 +33,7 @@ export default function MoreGames() {
       setIsSubmitted(true)
     } catch (error) {
       console.error(error)
+      setIsSubmitting(false)
     }
   }
 
@@ -153,7 +156,9 @@ export default function MoreGames() {
                   </div>
                 </div>
 
-                <button type="submit" className="inline-block bg-sky text-navy-dark w-full mt-5 font-bold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)]">Register for Games →</button>
+                <button type="submit" disabled={isSubmitting} className="inline-block bg-sky text-navy-dark w-full mt-5 font-bold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none">
+                  {isSubmitting ? "Submitting..." : "Register for Games →"}
+                </button>
               </form>
             )}
           </div>
