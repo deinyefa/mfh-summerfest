@@ -15,7 +15,7 @@ export default function Volunteer() {
     })
 
     try {
-      await fetch(form.action, {
+      await fetch(form.action + "?submit=true", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString(),
