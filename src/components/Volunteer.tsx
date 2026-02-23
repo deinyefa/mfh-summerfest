@@ -1,49 +1,9 @@
 "use client"
 
-import { useState, SyntheticEvent } from "react"
-import toast from "react-hot-toast"
+import { useFormSubmit } from "@/hooks/useFormSubmit"
 
 export default function Volunteer() {
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    const form = e.currentTarget
-    const formData = new FormData(form)
-    const data: Record<string, string | string[]> = {}
-    formData.forEach((value, key) => {
-      // Handle checkboxes explicitly by casting arrays
-      if (data[key]) {
-        if (!Array.isArray(data[key])) {
-          data[key] = [data[key] as string]
-        }
-        (data[key] as string[]).push(value.toString())
-      } else {
-        data[key] = value.toString()
-      }
-    })
-
-    try {
-      const response = await fetch('/api/submit', {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      })
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
-        throw new Error(errorData.error || "Failed to submit form")
-      }
-
-      setIsSubmitted(true)
-    } catch (error: any) {
-      console.error(error)
-      toast.error(error.message || "An error occurred. Please try again.")
-      setIsSubmitting(false)
-    }
-  }
+  const { isSubmitted, isSubmitting, handleSubmit } = useFormSubmit('/api/submit')
 
   return (
     <>
@@ -128,8 +88,8 @@ export default function Volunteer() {
 
                 <div className="mb-5">
                   <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Preferred Role</label>
-                  <select name="role" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 [&>option]:bg-navy [&>option]:text-white">
-                    <option value="" disabled selected>Select a role</option>
+                  <select name="role" required defaultValue="" className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 [&>option]:bg-navy [&>option]:text-white">
+                    <option value="" disabled>Select a role</option>
                     <option>Event Setup & Teardown</option>
                     <option>Guest Welcome & Registration</option>
                     <option>Crowd Management & Ushering</option>
