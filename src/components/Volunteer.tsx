@@ -1,4 +1,31 @@
+"use client"
+
+import { useState, SyntheticEvent } from "react"
+
 export default function Volunteer() {
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const params = new URLSearchParams()
+    formData.forEach((value, key) => {
+      params.append(key, value.toString())
+    })
+
+    try {
+      await fetch(form.action, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: params.toString(),
+      })
+      setIsSubmitted(true)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
     <>
       {/*  ──────── VOLUNTEER ────────  */}
@@ -30,69 +57,79 @@ export default function Volunteer() {
           </div>
 
           <div className="fade-up">
-            <form name="volunteer-signup" action="/volunteer-signup.html" method="POST" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md">
-              <input type="hidden" name="form-name" value="volunteer-signup" />
-              <div className="font-fraunces text-[1.4rem] text-white mb-6">Sign Up to Volunteer</div>
+            {isSubmitted ? (
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-md flex flex-col items-center justify-center text-center h-full min-h-[400px]">
+                <div className="w-16 h-16 bg-sky/20 text-sky rounded-full flex items-center justify-center mb-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <h3 className="font-fraunces text-[1.6rem] text-white mb-3">Welcome to the Team!</h3>
+                <p className="text-white/70 text-[0.95rem]">{"Thank you for signing up to volunteer. We'll be in touch soon with more details."}</p>
+              </div>
+            ) : (
+              <form name="volunteer-signup" action="/volunteer-signup.html" method="POST" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md" onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="volunteer-signup" />
+                <div className="font-fraunces text-[1.4rem] text-white mb-6">Sign Up to Volunteer</div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="mb-5">
+                    <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">First Name</label>
+                    <input name="first_name" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="Grace" />
+                  </div>
+                  <div className="mb-5">
+                    <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Last Name</label>
+                    <input name="last_name" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="Okafor" />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="mb-5">
+                    <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Email Address</label>
+                    <input name="email" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="email" placeholder="grace@email.com" />
+                  </div>
+
+                  <div className="mb-5">
+                    <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Phone Number</label>
+                    <input name="phone" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="tel" placeholder="(613) 555-0000" />
+                  </div>
+                </div>
+
                 <div className="mb-5">
-                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">First Name</label>
-                  <input name="first_name" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="Grace" />
-                </div>
-                <div className="mb-5">
-                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Last Name</label>
-                  <input name="last_name" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="text" placeholder="Okafor" />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="mb-5">
-                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Email Address</label>
-                  <input name="email" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="email" placeholder="grace@email.com" />
+                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Which event(s) can you volunteer for?</label>
+                  <div className="flex flex-col gap-2.5 mt-2 text-white/70">
+                    <label className="flex items-center gap-3 cursor-pointer">
+                      <input type="checkbox" name="events" value="Soccer Tournament" />
+                      <span>Soccer Tournament (Saturdays, May 23 – June 20)</span>
+                    </label>
+                    <label className="flex items-center gap-3 cursor-pointer">
+                      <input type="checkbox" name="events" value="Concert & Festival Day" />
+                      <span>Concert & Festival Day</span>
+                    </label>
+                  </div>
                 </div>
 
                 <div className="mb-5">
-                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Phone Number</label>
-                  <input name="phone" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="tel" placeholder="(613) 555-0000" />
+                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Preferred Role</label>
+                  <select name="role" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 [&>option]:bg-navy [&>option]:text-white">
+                    <option value="" disabled selected>Select a role</option>
+                    <option>Event Setup & Teardown</option>
+                    <option>Guest Welcome & Registration</option>
+                    <option>Crowd Management & Ushering</option>
+                    <option>Medic / First Aid (if qualified)</option>
+                    <option>Photography / Social Media</option>
+                    <option>Vendor Market Support</option>
+                    <option>General Assistance</option>
+                    <option>Open to Anything</option>
+                  </select>
                 </div>
-              </div>
 
-              <div className="mb-5">
-                <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Which event(s) can you volunteer for?</label>
-                <div className="flex flex-col gap-2.5 mt-2 text-white/70">
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" name="events" value="Soccer Tournament" />
-                    <span>Soccer Tournament (Saturdays, May 23 – June 20)</span>
-                  </label>
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" name="events" value="Concert & Festival Day" />
-                    <span>Concert & Festival Day</span>
-                  </label>
+                <div className="mb-5">
+                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Any skills or notes for us?</label>
+                  <textarea name="skills_notes" className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" rows={3} placeholder="e.g. I'm a trained first-aider, I speak French, I have my own camera..."></textarea>
                 </div>
-              </div>
 
-              <div className="mb-5">
-                <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Preferred Role</label>
-                <select name="role" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 [&>option]:bg-navy [&>option]:text-white">
-                  <option value="" disabled selected>Select a role</option>
-                  <option>Event Setup & Teardown</option>
-                  <option>Guest Welcome & Registration</option>
-                  <option>Crowd Management & Ushering</option>
-                  <option>Medic / First Aid (if qualified)</option>
-                  <option>Photography / Social Media</option>
-                  <option>Vendor Market Support</option>
-                  <option>General Assistance</option>
-                  <option>Open to Anything</option>
-                </select>
-              </div>
-
-              <div className="mb-5">
-                <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Any skills or notes for us?</label>
-                <textarea name="skills_notes" className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" rows={3} placeholder="e.g. I'm a trained first-aider, I speak French, I have my own camera..."></textarea>
-              </div>
-
-              <button type="submit" className="inline-block bg-sky font-bold text-sm tracking-[0.08em] text-navy-dark uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)] w-full" style={{ border: "none", }}>Sign Me Up →</button>
-            </form>
+                <button type="submit" className="inline-block bg-sky font-bold text-sm tracking-[0.08em] text-navy-dark uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)] w-full" style={{ border: "none", }}>Sign Me Up →</button>
+              </form>
+            )}
           </div>
         </div>
       </section>
