@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Bebas_Neue, Fraunces, Plus_Jakarta_Sans } from "next/font/google"
+import { Toaster } from "react-hot-toast"
 import "./globals.css"
 
 const bebasNeue = Bebas_Neue({
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={`${bebasNeue.variable} ${fraunces.variable} ${plusJakartaSans.variable}`}
       >
+        <Toaster position="top-center" />
         {children}
       </body>
     </html>

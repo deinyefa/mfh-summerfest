@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, SyntheticEvent } from "react"
+import toast from "react-hot-toast"
 
 export default function Vendors() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -25,14 +26,21 @@ export default function Vendors() {
     })
 
     try {
-      await fetch('/api/submit', {
+      const response = await fetch('/api/submit', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       })
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
+        throw new Error(errorData.error || "Failed to submit form")
+      }
+
       setIsSubmitted(true)
-    } catch (error) {
+    } catch (error: any) {
       console.error(error)
+      toast.error(error.message || "An error occurred. Please try again.")
       setIsSubmitting(false)
     }
   }
