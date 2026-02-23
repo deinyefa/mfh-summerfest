@@ -30,7 +30,7 @@ export default function Volunteer() {
           </div>
 
           <div className="fade-up">
-            <form name="volunteer-signup" method="POST" data-netlify="true" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md">
+            <form name="volunteer-signup" action="/volunteer-signup.html" method="POST" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md">
               <input type="hidden" name="form-name" value="volunteer-signup" />
               <div className="font-fraunces text-[1.4rem] text-white mb-6">Sign Up to Volunteer</div>
 

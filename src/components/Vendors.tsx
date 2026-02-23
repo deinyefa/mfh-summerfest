@@ -66,7 +66,7 @@ export default function Vendors() {
         </div>
 
         <div id="vendor-apply" className="fade-up [&_.form-card]:bg-white [&_.form-card]:border-[#e8eaf5] [&_.form-title]:text-navy [&_label]:text-navy-light [&_input]:bg-[#f7f8fc] [&_input]:border-[#dde0f0] [&_input]:text-navy [&_select]:bg-[#f7f8fc] [&_select]:border-[#dde0f0] [&_select]:text-navy [&_textarea]:bg-[#f7f8fc] [&_textarea]:border-[#dde0f0] [&_textarea]:text-navy [&_input:focus]:bg-[#eef9fe] [&_textarea:focus]:bg-[#eef9fe] [&_select:focus]:bg-[#eef9fe]">
-          <form name="vendor-application" method="POST" data-netlify="true" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md" style={{ background: "var(--white)", border: "1px solid #e8eaf5", }}>
+          <form name="vendor-application" action="/vendor-application.html" method="POST" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md" style={{ background: "var(--white)", border: "1px solid #e8eaf5", }}>
             <input type="hidden" name="form-name" value="vendor-application" />
             <div className="font-fraunces text-[1.4rem] text-white mb-6" style={{ color: "var(--navy)", }}>Vendor Application</div>
 

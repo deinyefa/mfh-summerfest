@@ -51,9 +51,9 @@ export default function MoreGames() {
 
           {/*  RIGHT: Signup Form  */}
           <div className="fade-up">
-            <form name="fun-games-signup" method="POST" data-netlify="true" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md">
+            <form name="fun-games-signup" action="/fun-games-signup.html" method="POST" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md">
               <input type="hidden" name="form-name" value="fun-games-signup" />
-              <div className="font-fraunces text-[1.4rem] text-white mb-6">Sign Up for Fun Games</div>
+              <div className="font-fraunces text-[1.4rem] text-white mb-6">Sign Up for More Games</div>
               <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.55)", marginBottom: "1.5rem", marginTop: "-0.5rem", }}>{"Register your interest and tell us which games you'd like to compete in. One entry per person."}</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
