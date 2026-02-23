@@ -9,16 +9,24 @@ export default function MoreGames() {
     e.preventDefault()
     const form = e.currentTarget
     const formData = new FormData(form)
-    const params = new URLSearchParams()
+    const data: Record<string, string | string[]> = {}
     formData.forEach((value, key) => {
-      params.append(key, value.toString())
+      // Handle checkboxes explicitly by casting arrays
+      if (data[key]) {
+        if (!Array.isArray(data[key])) {
+          data[key] = [data[key] as string]
+        }
+        (data[key] as string[]).push(value.toString())
+      } else {
+        data[key] = value.toString()
+      }
     })
 
     try {
-      await fetch(form.action + "?submit=true", {
+      await fetch('/api/submit', {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: params.toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       })
       setIsSubmitted(true)
     } catch (error) {
