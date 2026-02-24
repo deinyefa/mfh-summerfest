@@ -11,7 +11,7 @@ export default function MoreGames() {
       <section id="more-games" className="bg-navy relative overflow-hidden px-6 py-20 md:py-28 md:px-12">
         <div className="absolute inset-0 bg-size-[50px_50px]" style={{ backgroundImage: "linear-gradient(rgba(9,191,246,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(9,191,246,0.05) 1px, transparent 1px)", }}></div>
 
-        <div className="relative z-2 grid gap-20 items-start grid-cols-[1fr_1.2fr]">
+        <div className="relative z-2 grid gap-10 lg:gap-20 items-start grid-cols-1 lg:grid-cols-[1fr_1.2fr]">
 
           {/*  LEFT: Info  */}
           <div className="fade-up">

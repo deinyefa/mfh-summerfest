@@ -18,15 +18,16 @@ export default function Schedule() {
           <div className="flex flex-col gap-3 fade-up">
 
             {/*  GROUP STAGE ROWS  */}
-            <div className="flex items-stretch bg-white rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(43,51,95,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(43,51,95,0.11)] hover:-translate-y-0.5">
-              <div className="min-w-[170px] p-7 flex flex-col justify-center gap-1 shrink-0">
+            <div className="flex flex-col lg:flex-row items-stretch bg-white rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(43,51,95,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(43,51,95,0.11)] hover:-translate-y-0.5">
+              <div className="lg:min-w-[170px] p-6 lg:p-7 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-1 shrink-0">
                 <div className="text-2xl font-extrabold text-navy leading-tight group-[.sw2-dark]:text-white">May 23</div>
                 <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-navy/50">Group Stage</div>
                 <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-navy/75 mt-1">📍 TAAG Park</div>
               </div>
-              <div className="w-px bg-[#e8eaf5] shrink-0 my-5"></div>
-              <div className="flex-1 grid grid-cols-[1fr_auto_1fr] items-center text-center">
-                <div className="p-6 flex flex-col gap-2">
+              <div className="hidden lg:block w-px bg-[#e8eaf5] shrink-0 my-5"></div>
+              <div className="lg:hidden h-px bg-[#e8eaf5] shrink-0 mx-6"></div>
+              <div className="flex-1 flex flex-col lg:grid lg:grid-cols-[1fr_auto_1fr] items-center text-center">
+                <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-navy/50">Game 1</div>
                   <div className="flex items-center gap-3 justify-center">
                     <span className="text-[1.05rem] font-bold text-navy">Church A</span>
@@ -34,8 +35,9 @@ export default function Schedule() {
                     <span className="text-[1.05rem] font-bold text-navy">Church B</span>
                   </div>
                 </div>
-                <div className="w-px bg-[#e8eaf5] self-stretch my-4 shrink-0"></div>
-                <div className="p-6 flex flex-col gap-2">
+                <div className="hidden lg:block w-px bg-[#e8eaf5] self-stretch my-4 shrink-0"></div>
+                <div className="lg:hidden h-px bg-[#e8eaf5] self-stretch mx-6 shrink-0"></div>
+                <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-navy/50">Game 2</div>
                   <div className="flex items-center gap-3 justify-center">
                     <span className="text-[1.05rem] font-bold text-navy">Church C</span>
@@ -46,15 +48,16 @@ export default function Schedule() {
               </div>
             </div>
 
-            <div className="flex items-stretch bg-white rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(43,51,95,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(43,51,95,0.11)] hover:-translate-y-0.5">
-              <div className="min-w-[170px] p-7 flex flex-col justify-center gap-1 shrink-0">
+            <div className="flex flex-col lg:flex-row items-stretch bg-white rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(43,51,95,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(43,51,95,0.11)] hover:-translate-y-0.5">
+              <div className="lg:min-w-[170px] p-6 lg:p-7 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-1 shrink-0">
                 <div className="text-2xl font-extrabold text-navy leading-tight group-[.sw2-dark]:text-white">May 30</div>
                 <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-navy/50">Group Stage</div>
                 <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-navy/75 mt-1">📍 TAAG Park</div>
               </div>
-              <div className="w-px bg-[#e8eaf5] shrink-0 my-5"></div>
-              <div className="flex-1 grid grid-cols-[1fr_auto_1fr] items-center text-center">
-                <div className="p-6 flex flex-col gap-2">
+              <div className="hidden lg:block w-px bg-[#e8eaf5] shrink-0 my-5"></div>
+              <div className="lg:hidden h-px bg-[#e8eaf5] shrink-0 mx-6"></div>
+              <div className="flex-1 flex flex-col lg:grid lg:grid-cols-[1fr_auto_1fr] items-center text-center">
+                <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-navy/50">Game 1</div>
                   <div className="flex items-center gap-3 justify-center">
                     <span className="text-[1.05rem] font-bold text-navy">Church E</span>
@@ -62,8 +65,9 @@ export default function Schedule() {
                     <span className="text-[1.05rem] font-bold text-navy">Church F</span>
                   </div>
                 </div>
-                <div className="w-px bg-[#e8eaf5] self-stretch my-4 shrink-0"></div>
-                <div className="p-6 flex flex-col gap-2">
+                <div className="hidden lg:block w-px bg-[#e8eaf5] self-stretch my-4 shrink-0"></div>
+                <div className="lg:hidden h-px bg-[#e8eaf5] self-stretch mx-6 shrink-0"></div>
+                <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-navy/50">Game 2</div>
                   <div className="flex items-center gap-3 justify-center">
                     <span className="text-[1.05rem] font-bold text-navy">Church A</span>
@@ -74,15 +78,16 @@ export default function Schedule() {
               </div>
             </div>
 
-            <div className="flex items-stretch bg-white rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(43,51,95,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(43,51,95,0.11)] hover:-translate-y-0.5">
-              <div className="min-w-[170px] p-7 flex flex-col justify-center gap-1 shrink-0">
+            <div className="flex flex-col lg:flex-row items-stretch bg-white rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(43,51,95,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(43,51,95,0.11)] hover:-translate-y-0.5">
+              <div className="lg:min-w-[170px] p-6 lg:p-7 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-1 shrink-0">
                 <div className="text-2xl font-extrabold text-navy leading-tight group-[.sw2-dark]:text-white">June 6</div>
                 <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-navy/50">Group Stage</div>
                 <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-navy/75 mt-1">📍 TAAG Park</div>
               </div>
-              <div className="w-px bg-[#e8eaf5] shrink-0 my-5"></div>
-              <div className="flex-1 grid grid-cols-[1fr_auto_1fr] items-center text-center">
-                <div className="p-6 flex flex-col gap-2">
+              <div className="hidden lg:block w-px bg-[#e8eaf5] shrink-0 my-5"></div>
+              <div className="lg:hidden h-px bg-[#e8eaf5] shrink-0 mx-6"></div>
+              <div className="flex-1 flex flex-col lg:grid lg:grid-cols-[1fr_auto_1fr] items-center text-center">
+                <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-navy/50">Game 1</div>
                   <div className="flex items-center gap-3 justify-center">
                     <span className="text-[1.05rem] font-bold text-navy">Church B</span>
@@ -90,8 +95,9 @@ export default function Schedule() {
                     <span className="text-[1.05rem] font-bold text-navy">Church D</span>
                   </div>
                 </div>
-                <div className="w-px bg-[#e8eaf5] self-stretch my-4 shrink-0"></div>
-                <div className="p-6 flex flex-col gap-2">
+                <div className="hidden lg:block w-px bg-[#e8eaf5] self-stretch my-4 shrink-0"></div>
+                <div className="lg:hidden h-px bg-[#e8eaf5] self-stretch mx-6 shrink-0"></div>
+                <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-navy/50">Game 2</div>
                   <div className="flex items-center gap-3 justify-center">
                     <span className="text-[1.05rem] font-bold text-navy">Church E</span>
@@ -103,16 +109,17 @@ export default function Schedule() {
             </div>
 
             {/*  SEMIFINAL  */}
-            <div className="flex items-stretch bg-navy-light text-white! rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(43,51,95,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(43,51,95,0.11)] hover:-translate-y-0.5">
-              <div className="min-w-[170px] p-7 flex flex-col justify-center gap-1 shrink-0">
+            <div className="flex flex-col lg:flex-row items-stretch bg-navy-light text-white! rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(43,51,95,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(43,51,95,0.11)] hover:-translate-y-0.5">
+              <div className="lg:min-w-[170px] p-6 lg:p-7 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-1 shrink-0">
                 <div className="text-2xl font-extrabold leading-tight group-[.sw2-dark]:text-white">June 13</div>
                 {/* <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-white/50">Semifinal</div> */}
                 <span className="inline-block text-[0.6rem] font-extrabold tracking-[0.1em] uppercase px-2.5 py-1 rounded-full mt-2.5 w-max bg-sky text-navy-dark">Semifinal</span>
                 <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-white/75 mt-1">📍 Ravens Field</div>
               </div>
-              <div className="w-px bg-white/12 shrink-0 my-5"></div>
-              <div className="flex-1 grid grid-cols-[1fr_auto_1fr] items-center text-center">
-                <div className="p-6 flex flex-col gap-2">
+              <div className="hidden lg:block w-px bg-white/12 shrink-0 my-5"></div>
+              <div className="lg:hidden h-px bg-white/12 shrink-0 mx-6"></div>
+              <div className="flex-1 flex flex-col lg:grid lg:grid-cols-[1fr_auto_1fr] items-center text-center">
+                <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-white/45">Game 1</div>
                   <div className="flex items-center gap-3 justify-center">
                     <span className="text-[1.05rem] font-bold text-white">Winner G1</span>
@@ -120,8 +127,9 @@ export default function Schedule() {
                     <span className="text-[1.05rem] font-bold text-white">Runner-up G2</span>
                   </div>
                 </div>
-                <div className="w-px bg-white/10 self-stretch my-4 shrink-0"></div>
-                <div className="p-6 flex flex-col gap-2">
+                <div className="hidden lg:block w-px bg-white/10 self-stretch my-4 shrink-0"></div>
+                <div className="lg:hidden h-px bg-white/10 self-stretch mx-6 shrink-0"></div>
+                <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-white/45">Game 2</div>
                   <div className="flex items-center gap-3 justify-center">
                     <span className="text-[1.05rem] font-bold text-white">Winner G2</span>
@@ -133,16 +141,17 @@ export default function Schedule() {
             </div>
 
             {/*  FINALS  */}
-            <div className="flex items-stretch bg-navy-dark text-white! rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(43,51,95,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(43,51,95,0.11)] hover:-translate-y-0.5">
-              <div className="min-w-[170px] p-7 flex flex-col justify-center gap-1 shrink-0">
+            <div className="flex flex-col lg:flex-row items-stretch bg-navy-dark text-white! rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(43,51,95,0.06)] transition-all hover:shadow-[0_8px_32px_rgba(43,51,95,0.11)] hover:-translate-y-0.5">
+              <div className="lg:min-w-[170px] p-6 lg:p-7 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-1 shrink-0">
                 <div className="text-2xl font-extrabold leading-tight group-[.sw2-dark]:text-white">June 20</div>
                 <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-white/50">Finals</div>
                 <span className="inline-block text-[0.6rem] font-extrabold tracking-[0.1em] uppercase px-2.5 py-1 rounded-full mt-2.5 w-max bg-magenta text-white">Championship Day</span>
                 <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-white/75 mt-1">📍 TAAG Park</div>
               </div>
-              <div className="w-px bg-white/12 shrink-0 my-5"></div>
-              <div className="flex-1 grid grid-cols-[1fr_auto_1fr] items-center text-center">
-                <div className="p-6 flex flex-col gap-2">
+              <div className="hidden lg:block w-px bg-white/12 shrink-0 my-5"></div>
+              <div className="lg:hidden h-px bg-white/12 shrink-0 mx-6"></div>
+              <div className="flex-1 flex flex-col lg:grid lg:grid-cols-[1fr_auto_1fr] items-center text-center">
+                <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-white/45">3rd Place</div>
                   <div className="flex items-center gap-3 justify-center">
                     <span className="text-[1.05rem] font-bold text-white">Loser SF1</span>
@@ -150,8 +159,9 @@ export default function Schedule() {
                     <span className="text-[1.05rem] font-bold text-white">Loser SF2</span>
                   </div>
                 </div>
-                <div className="w-px bg-white/10 self-stretch my-4 shrink-0"></div>
-                <div className="p-6 flex flex-col gap-2">
+                <div className="hidden lg:block w-px bg-white/10 self-stretch my-4 shrink-0"></div>
+                <div className="lg:hidden h-px bg-white/10 self-stretch mx-6 shrink-0"></div>
+                <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-white/50">Final</div>
                   <div className="flex items-center gap-3 justify-center">
                     <span className="text-[1.05rem] font-bold text-white">Winner SF1</span>
