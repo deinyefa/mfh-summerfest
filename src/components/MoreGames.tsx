@@ -9,9 +9,9 @@ export default function MoreGames() {
     <>
       {/*  ──────── MORE GAMES ────────  */}
       <section id="more-games" className="bg-navy relative overflow-hidden px-6 py-20 md:py-28 md:px-12">
-        <div style={{ position: "absolute", inset: "0", backgroundImage: "linear-gradient(rgba(9,191,246,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(9,191,246,0.05) 1px, transparent 1px)", backgroundSize: "50px 50px", }}></div>
+        <div className="absolute inset-0 bg-size-[50px_50px]" style={{ backgroundImage: "linear-gradient(rgba(9,191,246,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(9,191,246,0.05) 1px, transparent 1px)", }}></div>
 
-        <div style={{ position: "relative", zIndex: "2", display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "5rem", alignItems: "start", }}>
+        <div className="relative z-2 grid gap-20 items-start grid-cols-[1fr_1.2fr]">
 
           {/*  LEFT: Info  */}
           <div className="fade-up">
@@ -19,39 +19,37 @@ export default function MoreGames() {
               Sports Days · Between Matches
             </div>
             <h2 className="font-bebas-neue text-[clamp(2.8rem,6vw,5rem)] leading-none tracking-[0.02em] text-white">More Sports<br />Games</h2>
-            <p className="text-[1.05rem] leading-[1.75] text-white/70 max-w-[55ch] mt-5" style={{ marginTop: "1.25rem", }}>{"In between soccer matches, we're running a series of fun track-and-field style games open to all adults from participating churches. No upper age limit — just show up and compete!"}</p>
+            <p className="text-[1.05rem] leading-[1.75] text-white/70 max-w-[55ch] mt-5">{"In between soccer matches, we're running a series of fun track-and-field style games open to all adults from participating churches. No upper age limit — just show up and compete!"}</p>
 
-            <div style={{ marginTop: "2.5rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", }}>
-
-              <div style={{ background: "rgba(9,191,246,0.1)", border: "1px solid rgba(9,191,246,0.25)", borderRadius: "1.25rem", padding: "1.5rem", }}>
-                <div style={{ fontSize: "1.75rem", marginBottom: "0.5rem", }}>👟</div>
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-sky/10 p-6 rounded-3xl solid border-1 border-sky/25">
+                <div className="mb-2 text-[1.75rem]">👟</div>
                 <div className="font-semibold text-white">Sack Race</div>
-                <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.55)", marginTop: "0.25rem", }}>Classic hopping fun</div>
+                <div className="text-xs text-white/55 mt-1">Classic hopping fun</div>
               </div>
 
-              <div style={{ background: "rgba(9,191,246,0.1)", border: "1px solid rgba(9,191,246,0.25)", borderRadius: "1.25rem", padding: "1.5rem", }}>
-                <div style={{ fontSize: "1.75rem", marginBottom: "0.5rem", }}>🏃</div>
+              <div className="bg-sky/10 p-6 rounded-3xl solid border-1 border-sky/25">
+                <div className="mb-2 text-[1.75rem]">🏃</div>
                 <div className="font-semibold text-white">Relay Race</div>
-                <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.55)", marginTop: "0.25rem", }}>Teamwork & speed</div>
+                <div className="text-xs text-white/55 mt-1">Teamwork & speed</div>
               </div>
 
-              <div style={{ background: "rgba(208,25,101,0.15)", border: "1px solid rgba(208,25,101,0.3)", borderRadius: "1.25rem", padding: "1.5rem", }}>
-                <div style={{ fontSize: "1.75rem", marginBottom: "0.5rem", }}>🥚</div>
+              <div className="bg-magenta/15 p-6 rounded-3xl solid border-1 border-magenta/30">
+                <div className="mb-2 text-[1.75rem]">🥚</div>
                 <div className="font-semibold text-white">Egg Race</div>
-                <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.55)", marginTop: "0.25rem", }}>Balance & precision</div>
+                <div className="text-xs text-white/55 mt-1">Balance & precision</div>
               </div>
 
-              <div style={{ background: "rgba(208,25,101,0.15)", border: "1px solid rgba(208,25,101,0.3)", borderRadius: "1.25rem", padding: "1.5rem", }}>
-                <div style={{ fontSize: "1.75rem", marginBottom: "0.5rem", }}>⚡</div>
+              <div className="bg-magenta/15 p-6 rounded-3xl solid border-1 border-magenta/30">
+                <div className="mb-2 text-[1.75rem]">⚡</div>
                 <div className="font-semibold text-white">100m Race</div>
-                <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.55)", marginTop: "0.25rem", }}>Pure speed</div>
+                <div className="text-xs text-white/55 mt-1">Pure speed</div>
               </div>
 
             </div>
 
-            <div style={{ marginTop: "2rem", display: "flex", alignItems: "center", gap: "0.75rem", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "0.75rem", padding: "1rem 1.25rem", }}>
-              <div style={{ width: "8px", height: "8px", background: "var(--sky)", borderRadius: "50%", flexShrink: "0", }}></div>
-              <span style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.7)", }}>Open to all adults <strong style={{ color: "var(--white)", }}>17 and over</strong> — no upper age limit. All genders welcome.</span>
+            <div className="mt-10 flex items-center gap-3 bg-white/6 border border-white/10 rounded-xl py-4 px-5">
+              <span className="text-sm text-white/70">Open to all adults <strong className="text-white">17 and over</strong> — no upper age limit. All genders welcome.</span>
             </div>
           </div>
 
@@ -68,8 +66,8 @@ export default function MoreGames() {
             ) : (
               <form name="fun-games-signup" action="/fun-games-signup.html" method="POST" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md" onSubmit={handleSubmit}>
                 <input type="hidden" name="form-name" value="fun-games-signup" />
-                <div className="font-fraunces text-[1.4rem] text-white mb-6">Sign Up for More Games</div>
-                <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.55)", marginBottom: "1.5rem", marginTop: "-0.5rem", }}>{"Register your interest and tell us which games you'd like to compete in. One entry per person."}</p>
+                <div className="font-fraunces text-[1.4rem] text-white mb-2">Sign Up for More Games</div>
+                <p className="text-sm text-white/55 mb-6">{"Register your interest and tell us which games you'd like to compete in. One entry per person."}</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="mb-5">

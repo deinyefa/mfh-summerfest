@@ -5,7 +5,7 @@ export default function Nav() {
       <nav className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 md:px-12 py-4 bg-[#2b335f]/92 backdrop-blur-md border-b border-[#09bff6]/20">
         <div className="font-fraunces text-lg text-white tracking-[0.02em] leading-tight">
           {"myFather's "}<span>House</span><br />
-          <small style={{ fontFamily: "'Plus Jakarta Sans'", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--lavender)", fontStyle: "normal", }}>{"THERE'S ROOM FOR YOU TOO"}</small>
+          <small className="text-lavender" style={{ fontFamily: "'Plus Jakarta Sans'", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", fontStyle: "normal", }}>{"THERE'S ROOM FOR YOU TOO"}</small>
         </div>
         <ul className="hidden md:flex gap-8 list-none">
           <li><a href="#about" className="uppercase text-white/70 text-[0.8rem] font-semibold tracking-widest hover:text-sky transition-colors">About</a></li>

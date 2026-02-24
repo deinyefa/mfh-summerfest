@@ -3,14 +3,14 @@ export default function Concert() {
     <>
       {/*  ──────── CONCERT ────────  */}
       <section id="concert" className="bg-navy-dark relative overflow-hidden px-6 py-20 md:py-28 md:px-12">
-        <div style={{ position: "relative", zIndex: "2", }}>
+        <div className="relative z-2">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 mt-16 items-start">
             <div className="fade-up">
               <div className="text-[0.7rem] font-bold tracking-[0.25em] uppercase text-magenta mb-3 flex items-center gap-3">Part Two · Concert & Festival</div>
               <h2 className="font-bebas-neue text-[clamp(2.8rem,6vw,5rem)] leading-none tracking-[0.02em] text-white fade-up">A Full Day of<br />Music & Praise</h2>
-              <p className="text-[1.05rem] leading-[1.75] text-white/70 max-w-[55ch] mt-5" style={{ marginTop: "0", }}>{"The second part of Summer Fest is a musical concert and vendor festival hosted by myFather's House. Expect a full day of praise and worship with a headlining act, DJs, musical ministers, and choirs from the participating churches."}</p>
+              <p className="text-[1.05rem] leading-[1.75] text-white/70 max-w-[55ch] mt-5">{"The second part of Summer Fest is a musical concert and vendor festival hosted by myFather's House. Expect a full day of praise and worship with a headlining act, DJs, musical ministers, and choirs from the participating churches."}</p>
 
-              <ul className="list-none flex flex-col gap-5 mt-4" style={{ marginTop: "2rem", }}>
+              <ul className="list-none flex flex-col gap-5 mt-5">
                 <li className="flex">
                   <div className="w-2 h-2 bg-sky rounded-full mt-[7px] shrink-0 mr-2"></div>
                   <div className="text-[0.95rem] leading-[1.6] text-white/75 [&>strong]:text-white [&>strong]:font-semibold"><strong>Headliner Act</strong> — A special performance from a to-be-announced headline artist</div>

@@ -13,7 +13,7 @@ export default function Volunteer() {
           <div className="fade-up [&_.section-eyebrow]:text-sky [&_.section-eyebrow::before]:bg-sky">
             <div className="text-[0.7rem] font-bold tracking-[0.25em] uppercase text-magenta mb-3 flex items-center gap-3">Get Involved</div>
             <h2 className="font-bebas-neue text-[clamp(2.8rem,6vw,5rem)] leading-none tracking-[0.02em] text-white">Volunteer<br />With Us</h2>
-            <p className="text-[1.05rem] leading-[1.75] text-white/70 max-w-[55ch] mt-5" style={{ marginTop: "1.25rem", }}>{"Summer Fest runs on the energy and dedication of amazing volunteers. Whether it's game day at the soccer tournament or the full concert day, we need passionate people to make it happen."}</p>
+            <p className="text-[1.05rem] leading-[1.75] text-white/70 max-w-[55ch] mt-5">{"Summer Fest runs on the energy and dedication of amazing volunteers. Whether it's game day at the soccer tournament or the full concert day, we need passionate people to make it happen."}</p>
 
             <div className="flex flex-col gap-4 mt-8">
               <div className="flex items-center gap-4 text-[0.9rem] text-white/75">
@@ -106,7 +106,7 @@ export default function Volunteer() {
                   <textarea name="skills_notes" className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" rows={3} placeholder="e.g. I'm a trained first-aider, I speak French, I have my own camera..."></textarea>
                 </div>
 
-                <button type="submit" disabled={isSubmitting} className="inline-block bg-sky font-bold text-sm tracking-[0.08em] text-navy-dark uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)] w-full disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none" style={{ border: "none", }}>
+                <button type="submit" disabled={isSubmitting} className="inline-block bg-sky font-bold text-sm tracking-[0.08em] text-navy-dark uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)] w-full disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none">
                   {isSubmitting ? "Submitting..." : "Sign Me Up →"}
                 </button>
               </form>

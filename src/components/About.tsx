@@ -7,7 +7,7 @@ export default function About() {
           <div className="text-[0.7rem] font-bold tracking-[0.25em] uppercase text-magenta mb-3 flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-0.5 before:bg-magenta">What is Summer Fest</div>
           <h2 className="font-bebas-neue text-[clamp(2.8rem,6vw,5rem)] leading-none tracking-[0.02em] text-navy">Two Parts.<br />One Community.</h2>
           <p className="text-[1.05rem] leading-[1.75] text-[#555e8a] max-w-[55ch] mt-5">{"Summer Fest is myFather's House's signature summer event — a celebration of faith, community, sport, and music. Across two parts, we bring together churches from across Ottawa for a soccer tournament and fun sports games, followed by an unforgettable concert and vendor market."}</p>
-          <p className="text-[1.05rem] leading-[1.75] text-[#555e8a] max-w-[55ch] mt-5" style={{ marginTop: "1rem", }}>{"All are welcome. Whether you're an athlete, a music lover, a local vendor, or just looking for something to do this summer — there's room for you here."}</p>
+          <p className="text-[1.05rem] leading-[1.75] text-[#555e8a] max-w-[55ch] mt-5">{"All are welcome. Whether you're an athlete, a music lover, a local vendor, or just looking for something to do this summer — there's room for you here."}</p>
         </div>
 
         <div className="relative h-[400px] fade-up">
