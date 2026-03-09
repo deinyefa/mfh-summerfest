@@ -82,7 +82,7 @@ export default function Schedule() {
               <div className="lg:min-w-[170px] p-6 lg:p-7 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-1 shrink-0">
                 <div className="text-2xl font-extrabold text-navy leading-tight group-[.sw2-dark]:text-white">June 6</div>
                 <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-navy/50">Group Stage</div>
-                <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-navy/75 mt-1">📍 TAAG Park</div>
+                <div className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-navy/75 mt-1">📍 Ravens Field</div>
               </div>
               <div className="hidden lg:block w-px bg-[#e8eaf5] shrink-0 my-5"></div>
               <div className="lg:hidden h-px bg-[#e8eaf5] shrink-0 mx-6"></div>
