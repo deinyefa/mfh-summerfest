@@ -22,7 +22,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-lavender">Concert & Festival</span>
-              <span className="text-[0.95rem] font-semibold text-white">Date TBA</span>
+              <span className="text-[0.95rem] font-semibold text-white">July 11, 2026</span>
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-lavender">Location</span>

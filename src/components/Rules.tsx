@@ -5,12 +5,12 @@ export default function Rules() {
         <div className="fade-up">
           <div className="text-[0.7rem] font-bold tracking-[0.25em] uppercase text-sky mb-3 flex items-center gap-3">Tournament</div>
           <h2 className="font-bebas-neue text-[clamp(2.8rem,6vw,5rem)] leading-none tracking-[0.02em] text-navy">Rules &<br />Requirements</h2>
-          <p className="text-[1.05rem] leading-[1.75] text-[#555e8a] max-w-[55ch] mt-5">The tournament is open to anyone who wants to compete, as long as your team meets these requirements. Teams must be coed — every team must include female players.</p>
+          <p className="text-[1.05rem] leading-[1.75] text-[#555e8a] max-w-[55ch] mt-5">The tournament is open to anyone who wants to compete, as long as your team meets these requirements.</p>
 
           <ul className="list-none flex flex-col gap-4 mt-8">
             <li className="flex">
               <span className="w-6 h-6 min-w-6 bg-sky/30 text-sky rounded-full flex items-center justify-center text-xs font-bold mt-px mr-2">✓</span>
-              <span>Each church decides who plays on their soccer team — <strong>no restrictions on team composition</strong></span>
+              <span>Each church decides who plays on their soccer team</span>
             </li>
             <li className="flex">
               <span className="w-6 h-6 min-w-6 bg-sky/30 text-sky rounded-full flex items-center justify-center text-xs font-bold mt-px mr-2">✓</span>
