@@ -16,10 +16,10 @@ export default function MoreGames() {
           {/*  LEFT: Info  */}
           <div className="fade-up">
             <div className="text-[0.7rem] font-bold tracking-[0.25em] uppercase text-sky mb-3 flex items-center gap-3">
-              Sports Days · Between Matches
+              Activities · Between Matches
             </div>
-            <h2 className="font-bebas-neue text-[clamp(2.8rem,6vw,5rem)] leading-none tracking-[0.02em] text-white">More Sports<br />Games</h2>
-            <p className="text-[1.05rem] leading-[1.75] text-white/70 max-w-[55ch] mt-5">{"In between soccer matches, we're running a series of fun track-and-field style games open to all adults from participating churches. No upper age limit — just show up and compete!"}</p>
+            <h2 className="font-bebas-neue text-[clamp(2.8rem,6vw,5rem)] leading-none tracking-[0.02em] text-white">More<br />Activities</h2>
+            <p className="text-[1.05rem] leading-[1.75] text-white/70 max-w-[55ch] mt-5">{"In between soccer matches, we're running a series of fun track-and-field style games and half time performances. Open to all adults from participating churches. No upper age limit — just show up and participate!"}</p>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-sky/10 p-6 rounded-3xl solid border-1 border-sky/25">
@@ -46,6 +46,12 @@ export default function MoreGames() {
                 <div className="text-xs text-white/55 mt-1">Pure speed</div>
               </div>
 
+              <div className="md:col-span-2 bg-white/10 p-6 rounded-3xl solid border-1 border-white/20">
+                <div className="mb-2 text-[1.75rem]">🎤</div>
+                <div className="font-semibold text-white">Half Time Performance</div>
+                <div className="text-xs text-white/55 mt-1">Showcase your talent</div>
+              </div>
+
             </div>
 
             <div className="mt-10 flex items-center gap-3 bg-white/6 border border-white/10 rounded-xl py-4 px-5">
@@ -66,8 +72,8 @@ export default function MoreGames() {
             ) : (
               <form name="fun-games-signup" action="/fun-games-signup.html" method="POST" className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md" onSubmit={handleSubmit}>
                 <input type="hidden" name="form-name" value="fun-games-signup" />
-                <div className="font-fraunces text-[1.4rem] text-white mb-2">Sign Up for More Games</div>
-                <p className="text-sm text-white/55 mb-6">{"Register your interest and tell us which games you'd like to compete in. One entry per person."}</p>
+                <div className="font-fraunces text-[1.4rem] text-white mb-2">Sign Up for Activities</div>
+                <p className="text-sm text-white/55 mb-6">{"Register your interest and tell us what you'd like to participate in. One entry per person."}</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="mb-5">
@@ -101,8 +107,8 @@ export default function MoreGames() {
                 </div>
 
                 <div className="mb-5">
-                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Which games would you like to compete in?</label>
-                  <div className="flex flex-col gap-2.5 mt-2">
+                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Which activities would you like to participate in?</label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 mt-3">
                     <label className="flex items-center gap-3 cursor-pointer text-white/55 uppercase tracking-widest font-bold">
                       <input type="checkbox" name="games" value="Sack Race" />
                       <span>👟 Sack Race</span>
@@ -119,11 +125,15 @@ export default function MoreGames() {
                       <input type="checkbox" name="games" value="100m Race" />
                       <span>⚡ 100m Race</span>
                     </label>
+                    <label className="flex items-center gap-3 cursor-pointer text-white/55 uppercase tracking-widest font-bold sm:col-span-2">
+                      <input type="checkbox" name="games" value="Half Time Performance" />
+                      <span>🎤 Half Time Performance</span>
+                    </label>
                   </div>
                 </div>
 
                 <button type="submit" disabled={isSubmitting} className="inline-block bg-sky text-navy-dark w-full mt-5 font-bold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none">
-                  {isSubmitting ? "Submitting..." : "Register for Games →"}
+                  {isSubmitting ? "Submitting..." : "Register for Activities →"}
                 </button>
               </form>
             )}

@@ -154,9 +154,9 @@ export default function Schedule() {
                 <div className="p-6 flex flex-col gap-2 w-full">
                   <div className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-white/45">3rd Place</div>
                   <div className="flex items-center gap-3 justify-center">
-                    <span className="text-[1.05rem] font-bold text-white">Loser SF1</span>
+                    <span className="text-[1.05rem] font-bold text-white">Runner-up SF1</span>
                     <span className="w-8 h-8 rounded-full flex items-center justify-center text-[0.58rem] font-extrabold tracking-[0.05em] uppercase shrink-0 bg-white/10 text-white/55">vs</span>
-                    <span className="text-[1.05rem] font-bold text-white">Loser SF2</span>
+                    <span className="text-[1.05rem] font-bold text-white">Runner-up SF2</span>
                   </div>
                 </div>
                 <div className="hidden lg:block w-px bg-white/10 self-stretch my-4 shrink-0"></div>

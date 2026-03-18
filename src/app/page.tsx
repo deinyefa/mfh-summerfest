@@ -35,8 +35,8 @@ export default function Home() {
       <About />
       <EventsSplit />
       <Schedule />
-      <MoreGames />
       <Rules />
+      <MoreGames />
       <Concert />
       <Vendors />
       <Volunteer />
