@@ -5,7 +5,7 @@ export async function POST(request: Request) {
     const formData = await request.json()
     const formName = formData["form-name"] || "unknown-form"
 
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw3X6Sh0L7JmQEqtOVfNnkYtHO9fixVtF7soQpGAeDQK5HXwt6UO5sLKZK-aaY2NQdrrQ/exec?token=LfT!d*w9caWje2NhM-m8MAdJ"
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwndr18h_7ZKSY_jhf82S0sqfUIgY6NtmAUYcYs-qKU9vpfzbe9YRn2UCmjmaFYsUafUA/exec?token=LfT!d*w9caWje2NhM-m8MAdJ"
 
     const payload = {
       form_name: formName,

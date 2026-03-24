@@ -13,6 +13,7 @@ export default function Footer() {
           <li><a href="#concert">Concert</a></li>
           <li><a href="#vendors">Vendors</a></li>
           <li><a href="#volunteer">Volunteer</a></li>
+          <li><a href="#sponsorships">Partner with us</a></li>
         </ul>
         <div className="text-xs text-white/30 tracking-[0.05em]">{"© 2026 myFather's House · Summer Fest · Ottawa, ON"}</div>
       </footer>

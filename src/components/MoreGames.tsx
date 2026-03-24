@@ -1,9 +1,17 @@
 "use client"
 
+import { useState, ChangeEvent } from "react"
 import { useFormSubmit } from "@/hooks/useFormSubmit"
 
 export default function MoreGames() {
   const { isSubmitted, isSubmitting, handleSubmit } = useFormSubmit('/api/submit')
+  const [isHalfTimeSelected, setIsHalfTimeSelected] = useState(false)
+  const [performanceDescription, setPerformanceDescription] = useState("")
+
+  function handleHalfTimeChange(e: ChangeEvent<HTMLInputElement>) {
+    setIsHalfTimeSelected(e.target.checked)
+    if (!e.target.checked) setPerformanceDescription("")
+  }
 
   return (
     <>
@@ -91,14 +99,16 @@ export default function MoreGames() {
                   <input name="email" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="email" placeholder="grace@email.com" />
                 </div>
 
-                <div className="mb-5">
-                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Phone Number</label>
-                  <input name="phone" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="tel" placeholder="(613) 555-0000" />
-                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="mb-5">
+                    <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Age</label>
+                    <input name="age" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="number" placeholder="e.g. 24" min="17" />
+                  </div>
 
-                <div className="mb-5">
-                  <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Age</label>
-                  <input name="age" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="number" placeholder="e.g. 24" min="17" />
+                  <div className="mb-5">
+                    <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Phone Number</label>
+                    <input name="phone" required className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30" type="tel" placeholder="(613) 555-0000" />
+                  </div>
                 </div>
 
                 <div className="mb-5">
@@ -126,11 +136,26 @@ export default function MoreGames() {
                       <span>⚡ 100m Race</span>
                     </label>
                     <label className="flex items-center gap-3 cursor-pointer text-white/55 uppercase tracking-widest font-bold sm:col-span-2">
-                      <input type="checkbox" name="games" value="Half Time Performance" />
+                      <input type="checkbox" name="games" value="Half Time Performance" onChange={handleHalfTimeChange} />
                       <span>🎤 Half Time Performance</span>
                     </label>
                   </div>
                 </div>
+
+                {isHalfTimeSelected && (
+                  <div className="mb-5">
+                    <label className="block text-xs font-bold tracking-[0.1em] uppercase text-lavender mb-2">Performance Description</label>
+                    <textarea
+                      name="performance_description"
+                      required
+                      value={performanceDescription}
+                      onChange={(e) => setPerformanceDescription(e.target.value)}
+                      rows={3}
+                      className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 placeholder:text-white/30 resize-y"
+                      placeholder="Briefly describe what you want to perform. Based on the description, we will get back to you."
+                    ></textarea>
+                  </div>
+                )}
 
                 <button type="submit" disabled={isSubmitting} className="inline-block bg-sky text-navy-dark w-full mt-5 font-bold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-full border-none cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(208,25,101,0.4)] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none">
                   {isSubmitting ? "Submitting..." : "Register for Activities →"}

@@ -11,7 +11,7 @@ import Concert from "@/components/Concert"
 import Vendors from "@/components/Vendors"
 import Volunteer from "@/components/Volunteer"
 import Footer from "@/components/Footer"
-
+import Sponsorships from "@/components/Sponsorships"
 import { useEffect } from 'react'
 
 export default function Home() {
@@ -40,6 +40,7 @@ export default function Home() {
       <Concert />
       <Vendors />
       <Volunteer />
+      <Sponsorships />
       <Footer />
     </>
   )

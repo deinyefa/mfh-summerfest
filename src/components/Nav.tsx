@@ -13,6 +13,7 @@ export default function Nav() {
           <li><a href="#more-games" className="uppercase text-white/70 text-[0.8rem] font-semibold tracking-widest hover:text-sky transition-colors">Fun Games</a></li>
           <li><a href="#concert" className="uppercase text-white/70 text-[0.8rem] font-semibold tracking-widest hover:text-sky transition-colors">Concert</a></li>
           <li><a href="#vendors" className="uppercase text-white/70 text-[0.8rem] font-semibold tracking-widest hover:text-sky transition-colors">Vendors</a></li>
+          <li><a href="#sponsorships" className="uppercase text-white/70 text-[0.8rem] font-semibold tracking-widest hover:text-sky transition-colors">Partner with us</a></li>
           <li><a href="#volunteer" className="uppercase bg-magenta text-white px-5 py-2 rounded-full transition-colors hover:bg-[#b0154f] text-[0.8rem] font-semibold tracking-widest">Volunteer</a></li>
         </ul>
       </nav>
