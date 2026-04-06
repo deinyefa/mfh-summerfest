@@ -63,7 +63,7 @@ export default function MoreGames() {
             </div>
 
             <div className="mt-10 flex items-center gap-3 bg-white/6 border border-white/10 rounded-xl py-4 px-5">
-              <span className="text-sm text-white/70">Open to all adults <strong className="text-white">17 and over</strong> — no upper age limit. All genders welcome.</span>
+              <span className="text-sm text-white/70">All genders welcome.</span>
             </div>
           </div>
 
