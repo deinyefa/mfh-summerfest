@@ -29,25 +29,25 @@ export default function Vendors() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-            <div className="rounded-2xl p-7 relative overflow-hidden bg-navy-dark text-white">
-              <div className="absolute top-0 right-0 bg-sky text-navy-dark text-[0.7rem] font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-bl-2xl">
-                Early Bird
+            <div className="rounded-2xl p-7 relative overflow-hidden bg-[#f9fafc] border border-black/5 text-navy">
+              <div className="absolute top-0 right-0 bg-lavender text-white text-[0.7rem] font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-bl-2xl">
+                Early Bird - sold out
               </div>
-              <div className="font-bebas-neue text-[3.5rem] leading-none text-sky mb-1 mt-4">
+              <div className="font-bebas-neue text-[3.5rem] leading-none text-navy/50 mb-1 mt-4">
                 $60
               </div>
-              <div className="text-xs font-semibold uppercase tracking-widest text-white/70">
+              <div className="text-xs font-semibold uppercase tracking-widest text-navy/50">
                 For the first 15 vendors
               </div>
             </div>
-            <div className="rounded-2xl p-7 relative overflow-hidden bg-[#f9fafc] border border-black/5 text-navy">
-              <div className="absolute top-0 right-0 bg-lavender text-white text-[0.7rem] font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-bl-2xl">
+            <div className="rounded-2xl p-7 relative overflow-hidden  bg-navy-dark text-white">
+              <div className="absolute top-0 right-0  bg-sky text-navy-dark text-[0.7rem] font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-bl-2xl">
                 Regular
               </div>
-              <div className="font-bebas-neue text-[3.5rem] leading-none text-navy-dark mb-1 mt-4">
+              <div className="font-bebas-neue text-[3.5rem] leading-none text-sky mb-1 mt-4">
                 $100
               </div>
-              <div className="text-xs font-semibold uppercase tracking-widest text-navy/50">
+              <div className="text-xs font-semibold uppercase tracking-widest text-white/70">
                 Standard registration
               </div>
             </div>
@@ -360,8 +360,8 @@ export default function Vendors() {
                   required
                   className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm font-sans text-white outline-none transition-colors focus:border-sky focus:bg-sky/10 [&>option]:bg-navy [&>option]:text-white"
                 >
-                  <option value="Early Bird — $60">Early Bird — $60</option>
-                  <option value="Regular — $100">Regular — $100</option>
+                  <option disabled value="Early Bird — $60">Early Bird — $60</option>
+                  <option selected value="Regular — $100">Regular — $100</option>
                 </select>
               </div>
 
