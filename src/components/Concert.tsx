@@ -25,7 +25,7 @@ export default function Concert() {
                 </li>
                 <li className="flex">
                   <div className="w-2 h-2 bg-sky rounded-full mt-[7px] shrink-0 mr-2"></div>
-                  <div className="text-[0.95rem] leading-[1.6] text-white/75 [&>strong]:text-white [&>strong]:font-semibold"><strong>Vendor Market</strong> — 30+ vendors throughout the venue with food, goods, and services. Free cold water provided on-site</div>
+                  <div className="text-[0.95rem] leading-[1.6] text-white/75 [&>strong]:text-white [&>strong]:font-semibold"><strong>Vendor Market</strong> — Vendors throughout the venue with food, goods, and services. Free cold water provided on-site</div>
                 </li>
               </ul>
             </div>
@@ -44,7 +44,6 @@ export default function Concert() {
                   <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full m-1 whitespace-nowrap">🎧 DJ Sets</span>
                   <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full m-1 whitespace-nowrap">🎵 Choir Ministrations</span>
                   <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full m-1 whitespace-nowrap">🛍 Vendor Market</span>
-                  <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full m-1 whitespace-nowrap">💧 Free Water</span>
                   <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full m-1 whitespace-nowrap">🙏 Praise & Worship</span>
                 </div>
               </div>
